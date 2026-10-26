@@ -1,0 +1,18 @@
+{
+  "source": "src/main/resources/plugin.yml",
+  "revision": "cd678cc6",
+  "source_sha256": "c4eacc087ca46883ec9599325ee449418b16b1cc764c62b6310bcc42b6fd3332",
+  "commands": {
+    "nomiheadbuy": {
+      "description": "购买本人头像或生成购买确认",
+      "aliases": [
+        "nomiheads"
+      ]
+    }
+  },
+  "permissions": {
+    "nomiheadbuy.use": {
+      "default": true
+    }
+  }
+}
