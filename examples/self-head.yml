@@ -1,0 +1,30 @@
+# 本人头像直购；由 TrMenu 原生动作处理费用与发放。
+Title: '本人头像'
+Layout:
+- '    H    '
+Icons:
+  H:
+    update: 20
+    display:
+      material: head:%player_name%
+      name: '&e&l自己的头'
+      lore:
+      - '&a&m-------------------'
+      - '&f消耗：&d100 米粒'
+      - '&f获得：&e自己的头像'
+      - ''
+      - '&7绑定你的玩家身份'
+      - '&7使用当前皮肤生成头像'
+      - ''
+      - '&e鼠标左键：购买本人头像'
+      - '&a&m-------------------'
+    actions:
+      left:
+      - 'sound: UI_BUTTON_CLICK-1-1'
+      - condition: money 100
+        actions:
+        - 'take-money: 100'
+        - 'give-item: material:PLAYER_HEAD,head:%player_name%,amount:1'
+        - 'tell: 购买成功'
+        deny-actions:
+        - 'tell: 余额不足'
